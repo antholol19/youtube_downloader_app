@@ -4,17 +4,47 @@
     <title>Home page</title>
 </head>
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+<link rel= "stylesheet" href="view.css">
 <body>
-    <h1>Youtube mp4 Audio downloader</h1>
-    <form action="{{ url_for('handle_url') }}" method="post">
-        <label for="url">Youtube link:</label><br>
-        <input type="text" id="url" name="url" size="50" placeholder="https://www.youtube.com/..." autocomplete="off" required><br>
-        <input type="submit" name="submit" value="Download"><br>
-
-        Cut the video:<br>
-        <input type="radio" name="sequence" value="NO" checked>No<br>
-        <input type="radio" name="sequence" value="YES">Yes<br>
-
-    </form>
+    <div class="box">
+        <h1>Youtube downloader</h1>
+        <form action="{{ url_for('handle_url') }}" method="post">
+            <input type="text" id="url" name="url" size="50" placeholder="https://www.youtube.com/..." autocomplete="off" required>
+            <input type="submit" id="download" name="submit" value="Download"><br>
+            <div class="container">
+                <div class="grid-container">
+                    Trim video:<br>
+                    <input type="radio" id="chkYes" name="sequence" value="yes" onclick="displayTrim()">
+                    <label for="chkYes">Yes</label><br>
+                    <input type="radio" id="chkNo" name="sequence" value="no" onclick="hideTrim()" checked>
+                    <label for="chkNo">No</label><br>
+                </div>
+                <div class="grid-container">
+                    <div id="trim">
+                        Clip interval:<br>
+                        Start: 
+                        <input type="text" id="start" name="time" placeholder="0" autocomplete="off"> second<br>
+                        End: 
+                        <input type="text" id="end" name="time" placeholder="0" autocomplete="off"> second<br>
+                    </div>  
+                </div>
+                <div class="grid-container">
+                    Audio only:<br>
+                    <input type="radio" name="audio" value="yes">Yes<br>
+                    <input type="radio" name="audio" value="no" checked>No<br>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function displayTrim(){
+            document.getElementById("trim").style.visibility = "visible"
+        }
+        function hideTrim(){
+            document.getElementById("trim").style.visibility = "hidden"
+            document.getElementById('start').value = ''
+            document.getElementById('end').value = ''
+        }
+    </script>
 </body>
 </html>
