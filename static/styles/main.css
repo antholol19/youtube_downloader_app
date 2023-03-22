@@ -53,10 +53,6 @@ input[type=radio]{
   cursor: pointer;
 }
 
-#trim{
-  visibility: hidden;
-}
-
 .container{
   display: grid;
   width: 60%;
