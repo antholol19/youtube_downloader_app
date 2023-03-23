@@ -2,14 +2,17 @@
 <html>
 <head>
     <title>Home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='style.css') }}">
 </head>
-<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
 <body>
     <div class="box">
         <h1>Youtube downloader</h1>
         <form action="{{ url_for('handle_download') }}" method="post">
             <input type="text" id="url" name="url" placeholder="https://www.youtube.com/..." autocomplete="off" required>
-            <input type="submit" id="download" name="submit" value="Download"><br>
+            <button type="submit" class="download"><i class="fa fa-download"></i> Download</button>
             <div class="container">
                 <div class="grid-container">
                     Video only:<br>
