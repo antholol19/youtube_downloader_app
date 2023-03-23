@@ -1,7 +1,7 @@
 # Application pour télécharger des séquences audio sur youtube
 
 ## Fonctionnement
-L'utilisateur a accès une application web (pas encore accessible au public). Cet API donne l'option à l'utilisateur d'entrer le lien url d'une video youtube. Il peut aussi entrer la séquence audio en secondes qu'il souhaite récupéré (à faire bientôt). Ces paramètres sont ensuite récupérés par Flask et traités en Python qui va s'occuper de télécharger l'audio de la video.
+L'utilisateur a accès une application web (pas encore accessible au public). Cette application donne l'option à l'utilisateur d'entrer le lien url d'une video youtube. Il peut choisir de télécharger la video (mp4), seulement l'audio (mp4) ou seulement la vidéo (webm). Ces paramètres sont ensuite récupérés par Flask et traités en Python qui va s'occuper d'effectuer les téléchargements.
 
 ## Technologies
 Ce projet utilise les technologies suivantes:
