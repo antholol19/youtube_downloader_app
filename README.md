@@ -16,7 +16,6 @@ Pour en connaître davantage sur ces technologies, voici leurs liens
 ## Libraires Python utilisées
 Les librairies nécessaires pour Python:
 * pytube 12.1.2
-* moviepy 1.0.3
 
 ## Installation
 Voici comment installer ce projet
@@ -27,5 +26,4 @@ Voici comment installer ce projet
 4. Vérifier que la version 2.0 ou plus de Flask soit installée: `$ flask --version`
 5. Installer les librairies Python requises:
   * `$ pip install pytube`
-  * `$ pip install moviepy`
 <hr>
